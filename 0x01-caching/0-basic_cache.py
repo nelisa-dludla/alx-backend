@@ -8,6 +8,9 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 
 class BasicCache(BaseCaching):
+    '''
+    This is the BasicCache class
+    '''
     def __init__(self):
         super().__init__()
 
