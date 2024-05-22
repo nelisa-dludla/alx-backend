@@ -8,19 +8,19 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 
 class BasicCache(BaseCaching):
-    '''
-    This is the BasicCache class
-    '''
+    '''Defines the BasicCache class'''
     def __init__(self):
         super().__init__()
 
     def put(self, key, item):
+        '''Adds item to self.cache_data dict'''
         if key is None or item is None:
             return
 
         self.cache_data[key] = item
 
     def get(self, key):
+        '''Returns value assigned to key'''
         if key is None:
             return None
 
