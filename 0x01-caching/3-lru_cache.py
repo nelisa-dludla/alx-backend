@@ -11,11 +11,13 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 
 class LRUCache(BaseCaching):
+    '''Defines the LRUCache class'''
     def __init__(self):
         super().__init__()
         self.cache_data = OrderedDict()
 
     def put(self, key, item):
+        '''Adds item to self.cache_data dict'''
         if key is None or item is None:
             return
 
@@ -31,6 +33,7 @@ class LRUCache(BaseCaching):
         self.cache_data[key] = item
 
     def get(self, key):
+        '''Returns value assigned to key'''
         if key is None or key not in self.cache_data:
             return None
 
