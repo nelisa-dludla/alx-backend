@@ -29,7 +29,7 @@ users = {
 }
 
 
-@babel.localeselector
+#@babel.localeselector
 def get_locale():
     '''
     Determines the ideal language amongst the
