@@ -10,6 +10,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
+    '''
+    Render 0-index.html
+    '''
     return render_template('0-index.html')
 
 
