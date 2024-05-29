@@ -4,7 +4,7 @@ A simple Flask app with Babel
 '''
 
 from flask import Flask, render_template, request
-from flask_babel import Babel
+from flask_babel import Babel, gettext as _
 
 
 class Config:
@@ -29,7 +29,7 @@ def get_locale():
 
 @app.route('/')
 def hello_world():
-    return render_template('2-index.html')
+    return render_template('3-index.html')
 
 
 if __name__ == '__main__':
