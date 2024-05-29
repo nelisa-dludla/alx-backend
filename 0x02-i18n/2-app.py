@@ -8,6 +8,9 @@ from flask_babel import Babel
 
 
 class Config:
+    '''
+    Defines the Config class
+    '''
     LANGUAGES = ['en', 'fr']
     BABEL_DEFAULT_LOCALE = 'en'
     BABEL_DEFAULT_TIMEZONE = 'UTC'
@@ -20,6 +23,10 @@ babel = Babel(app)
 
 @babel.localeselector
 def get_locale():
+    '''
+    Determines the ideal language amongst the
+    supported languages
+    '''
     supported_languages = request.accept_languages.languages()
 
     for language in supported_languages:
@@ -29,6 +36,9 @@ def get_locale():
 
 @app.route('/')
 def hello_world():
+    '''
+    Renders 2-index.html
+    '''
     return render_template('2-index.html')
 
 
